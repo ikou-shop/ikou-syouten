@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- トップページ -->
+  <url>
+    <loc>https://ikou-shop.github.io/ikou-syouten/</loc>
+    <lastmod>2025-01-01</lastmod>
+  </url>
+
+  <!-- 固定ページ -->
+  <url><loc>https://ikou-shop.github.io/ikou-syouten/index.html</loc></url>
+  <url><loc>https://ikou-shop.github.io/ikou-syouten/kakuuchi.html</loc></url>
+  <url><loc>https://ikou-shop.github.io/ikou-syouten/tokuyaku.html</loc></url>
+  <url><loc>https://ikou-shop.github.io/ikou-syouten/news.html</loc></url>
+  <url><loc>https://ikou-shop.github.io/ikou-syouten/event.html</loc></url>
+
+  <!-- 動的ページ（?id=〇〇 形式） -->
+  <!-- NEWS 詳細ページ -->
+  <url><loc>https://ikou-shop.github.io/ikou-syouten/news_detail.html?id=20251101</loc></url>
+  <url><loc>https://ikou-shop.github.io/ikou-syouten/news_detail.html?id=20251001</loc></url>
+
+  <!-- EVENT 詳細ページ -->
+  <url><loc>https://ikou-shop.github.io/ikou-syouten/event_detail.html?id=20251207</loc></url>
+  <url><loc>https://ikou-shop.github.io/ikou-syouten/event_detail.html?id=20251115</loc></url>
+  <url><loc>https://ikou-shop.github.io/ikou-syouten/event_detail.html?id=20251125</loc></url>
+
+</urlset>
+<url><loc>https://ikou-shop.github.io/ikou-syouten/news_detail.html?id=追加したID</loc></url>
+<url><loc>https://ikou-shop.github.io/ikou-syouten/event_detail.html?id=追加したID</loc></url>
+
