@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>イベント情報｜薫酒や いこう商店</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="text-dark text-center py-0" style="background: linear-gradient(135deg, #fcfcfb, #ffffff);">
+  <div class="text-center px-4">
+    <img src="/images/hedda-.png" alt="薫酒や いこう商店" class="img-fluid" style="max-width: 250px;">
+  </div>
+</header>
+
+<div class="container my-5">
+  <h1 id="ev-title" class="mb-2"></h1>
+  <p id="ev-date" class="text-muted mb-3"></p>
+  <img id="ev-image" class="img-fluid my-3 d-none rounded" alt="">
+  <div id="ev-body" class="mb-4"></div>
+  <ul id="ev-details" class="list-unstyled"></ul>
+
+<!-- 予約案内（最初は非表示） -->
+<section class="pt-3 pb-0 d-none" id="reservation-block">
+  <div class="container">
+    <h2 class="mb-4">予約について</h2>
+    <p>ご予約は以下の方法で承ります：</p>
+    <ul>
+      <li><a href="https://page.line.me/266igwgs" target="_blank">公式LINE メッセージ</a></li>
+      <li><a href="https://www.instagram.com/kunsyuya_ikou/" target="_blank">InstagramのDM</a></li>
+      <li>電話：<a href="tel:0366823892">03-6682-3892</a></li>
+    </ul>
+  </div>
+</section>
+
+  <!-- 置き換え：aタグの代わりに「戻る」ボタンを採用 -->
+<button type="button" class="btn btn-outline-secondary mt-3"
+  onclick="if (document.referrer && document.referrer !== location.href) { history.back(); } else { location.href='event.html'; }">
+  ← イベント一覧へ戻る
+</button>
+
+</div>
+
+<footer class="text-center py-3 mt-5" style="background-color: #f0f0f0;">
+  &copy; 2025 薫酒や いこう商店
+</footer>
+
+<script src="js/event_detail.js"></script>
+</body>
+</html>

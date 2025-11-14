@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>イベント情報｜薫酒や いこう商店</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="text-dark text-center py-0" style="background: linear-gradient(135deg, #fcfcfb, #ffffff);" id="home">
+  <div class="text-center px-4">
+    <img src="/images/hedda-.png" alt="薫酒や いこう商店" class="img-fluid" style="max-width: 250px;">
+  </div>
+</header>
+
+  <div class="container my-5">
+    <h1 class="mb-4">イベント情報 一覧</h1>
+
+    <!-- JSで全件レンダリング -->
+    <div id="event-list"></div>
+
+    <!-- トップへ戻るボタン -->
+    <a href="index.html#event" class="btn btn-secondary mt-3">← トップページへ戻る</a>
+
+    <noscript class="text-danger d-block mt-3">※JavaScriptを有効にするとイベント一覧が表示されます。</noscript>
+  </div>
+
+  <footer class="text-center py-3 mt-5" style="background-color: #f0f0f0;">
+    &copy; 2025 薫酒や いこう商店
+  </footer>
+
+  <!-- 一覧描画スクリプト -->
+  <script src="js/event.js"></script>
+  <script>
+    // 全件表示
+    renderEvents();
+  </script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+:root {
+  --main-color: #5c4033;        /* 焦げ茶 */
+  --accent-color: #d9ff68;      /* 金茶 */
+  --background-light: #f9f5f1;
+  --section-header-bg: #f0e5da;
+}
+
+/* ベース設定 */
+body {
+  scroll-behavior: smooth;
+  background-color: var(--background-light);
+  font-family: 'Noto Serif JP', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  color: #2c2c2c;
+}
+
+/* 見出し */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Noto Serif JP', serif;
+  color: inherit;
+  border-left: none !important;
+  padding-left: 0 !important;
+}
+
+/* セクション共通 */
+section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: var(--section-header-bg);
+  border-bottom: 1px solid #ddd;
+}
+
+/* スプラッシュ画面 */
+#splash {
+  position: fixed;
+  z-index: 9999;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 共通（PC〜タブレット） */
+#splash img {
+  width: 80vw;
+  max-width: 500px;
+  height: auto;
+  animation: fadeOut 0.6s ease 1.2s forwards; /* 短く調整済み */
+}
+
+/* スマホ用 */
+@media (max-width: 576px) {
+  #splash img {
+    width: 60vw;
+    max-width: 260px;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+#mainContent {
+  opacity: 0;
+  animation: fadeIn 0.6s ease 1.3s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* ナビゲーション */
+.navbar {
+  background-color: var(--main-color) !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--accent-color);
+}
+
+/* フッター */
+footer {
+  background-color: var(--main-color);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* ヒーローセクション */
+.hero-section {
+  position: relative;
+  background-image: url("/images/tenpo2.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+
+.hero-section .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* カルーセル */
+.carousel-inner img {
+  max-height: 400px;
+  object-fit: cover;
+}
+
+/* ボタン */
+.btn-primary {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+.btn-primary:hover {
+  background-color: #3b2b23;
+  border-color: #3b2b23;
+}
+
+/* 角打ち用ボタン */
+.btn-kakuuchi {
+  background-color: #7e3e16;
+  border-color: #000;
+}
+
+.btn-kakuuchi:hover {
+  background-color: #8e5737;
+  border-color: #fff;
+}
+
+/* 特約酒蔵ページボタン */
+.btn-tokuyaku {
+  background-color: #2e7d32;
+  border-color: #2e7d32;
+}
+
+.btn-tokuyaku:hover {
+  background-color: #1b5e20;
+  border-color: #1b5e20;
+}
+
+/* 背景セクション共通 */
+.bg-section {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+
+.bg-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+}
+
+.bg-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* 各背景画像指定 */
+#about.bg-section::before  { background-image: url('/images/tenpo2.jpg'); }
+#kakuchi.bg-section::before { background-image: url('/images/kakuuchi.jpg'); }
+#tokuyaku.bg-section::before { background-image: url('/images/sakenarabi.jpg'); }
+#othersake.bg-section::before { background-image: url('/images/特約以外.jpg'); }
+
+/* 特約ページ（単体ページ） */
+.tokuyaku-page .hero-section {
+  background: url('/images/tenpo3.jpg') center / cover no-repeat;
+}
+
+.tokuyaku-page .hero-section .overlay {
+  padding-top: 120px;
+  padding-bottom: 60px;
+}
+
+/* ============================== */
+/* PC版：about & kakuchi を中央寄せ */
+/* ============================== */
+@media (min-width: 992px) {
+  #about .col-md-6,
+  #kakuchi .col-md-6 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  #about .btn,
+  #kakuchi .btn {
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+  }
+}
+
+/* ======================================== */
+/* 全デバイス共通：特約酒蔵・その他銘柄を中央揃え ＆ ・なし */
+/* ======================================== */
+#tokuyaku ul,
+#othersake ul {
+  text-align: center;
+  padding-left: 0;
+}
+
+#tokuyaku li,
+#othersake li {
+  list-style: none;
+  text-align: center;
+  margin-bottom: 5px;
+}

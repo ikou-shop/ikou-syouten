@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>特約酒屋 | 薫酒や いこう商店</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <body class="tokuyaku-page">
+  <style>
+    .navbar-light .navbar-nav .nav-link {
+      color: #ffffff;
+    }
+    .navbar-light .navbar-nav .nav-link:hover {
+      color: #ff5656;
+    }
+    .card-img-fit {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+    .hero-section {
+      background: url('sake-bg.jpg') center center / cover no-repeat;
+      position: relative;
+    }
+    .hero-section .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 60px 0;
+    }
+  </style>
+</head>
+<body class="tokuyaku-page">
+
+<!-- ナビゲーション -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container">
+    <span class="navbar-brand text-white">薫酒や いこう商店</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#kobayashi">小林酒造</a></li>
+        <li class="nav-item"><a class="nav-link" href="#koikawashuzou">鯉川酒造</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">トップページに戻る</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ヒーローセクション -->
+<header class="hero-section text-white text-center">
+  <div class="overlay">
+    <div class="container py-5">
+      <h1 class="display-4">特約酒屋のご紹介</h1>
+      <p class="lead">薫酒や いこう商店が信頼する酒蔵の魅力</p>
+    </div>
+  </div>
+</header>
+
+<!-- 小林酒造セクション -->
+<section id="kobayashi" class="position-relative text-white" style="background: url('kobayashishuzou.jpg') center center / cover no-repeat; min-height: 600px;">
+  <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75"></div>
+  <div class="container position-relative py-5">
+    <h2 class="mb-3">小林酒造（北海道）</h2>
+    <p>小林酒造は、北海道栗山町に位置する歴史ある蔵元です。寒冷な気候と清らかな水を活かした酒造りが特徴です。</p>
+    <p>▶ 公式サイト：<a href="http://www.kitanonishiki.com/" target="_blank" class="text-info">http://www.kitanonishiki.com/</a></p>
+
+    <div class="row g-3 mt-4">
+      <!-- 商品カード1 -->
+      <div class="col-md-6">
+        <div class="card h-100">
+          <div class="row g-0 align-items-center">
+            <div class="col-8">
+              <div class="card-body">
+                <h5 class="card-title">山田 純米吟醸</h5>
+                <p class="card-text">フルーティーな香りと透明感ある味わい</p>
+                <p class="text-end fw-bold">¥1,800（720ml）</p>
+              </div>
+            </div>
+            <div class="col-4">
+              <img src="huyuhanabi1.jpg" class="img-fluid rounded-end card-img-fit" alt="山田 純米吟醸">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 商品カード2 -->
+      <div class="col-md-6">
+        <div class="card h-100">
+          <div class="row g-0 align-items-center">
+            <div class="col-8">
+              <div class="card-body">
+                <h5 class="card-title">山田 特別本醸造</h5>
+                <p class="card-text">キレのある辛口で、食中酒に最適</p>
+                <p class="text-end fw-bold">¥1,400（720ml）</p>
+              </div>
+            </div>
+            <div class="col-4">
+              <img src="huyuhanabi1.jpg" class="img-fluid rounded-end card-img-fit" alt="山田 特別本醸造">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 佐藤酒造セクション -->
+<section id="koikawashuzou" class="position-relative text-white" style="background: url('tenpo.jpg') center center / cover no-repeat; min-height: 600px;">
+  <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75"></div>
+  <div class="container position-relative py-5">
+    <h2 class="mb-3">鯉川酒造（新潟県）</h2>
+    <p>越後の雪国・新潟県に根差した鯉川酒造は、淡麗辛口の酒造りを代々受け継ぐ蔵元です。
+雪解け水と新潟産の酒米「五百万石」を用い、雑味のないキレのある味わいを追求。
+食事を引き立てる飲み飽きない酒が多くの地元ファンに愛されています。</p>
+    <p>▶ 公式サイト：<a href="https://sake-koikawa.jp/dealer/" target="_blank" class="text-info">https://sake-koikawa.jp/dealer/</a></p>
+
+    <div class="row g-3 mt-4">
+      <!-- 商品カード1 -->
+      <div class="col-md-6">
+        <div class="card h-100">
+          <div class="row g-0 align-items-center">
+            <div class="col-8">
+              <div class="card-body">
+                <h5 class="card-title">佐藤 純米大吟醸</h5>
+                <p class="card-text">華やかな香りと米の旨味が調和</p>
+                <p class="text-end fw-bold">¥2,200（720ml）</p>
+              </div>
+            </div>
+            <div class="col-4">
+              <img src="tenpo.jpg" class="img-fluid rounded-end card-img-fit" alt="佐藤 純米大吟醸">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 商品カード2 -->
+      <div class="col-md-6">
+        <div class="card h-100">
+          <div class="row g-0 align-items-center">
+            <div class="col-8">
+              <div class="card-body">
+                <h5 class="card-title">佐藤 生酛純米</h5>
+                <p class="card-text">伝統の生酛造り、濃醇でまろやか</p>
+                <p class="text-end fw-bold">¥1,600（720ml）</p>
+              </div>
+            </div>
+            <div class="col-4">
+              <img src="tenpo2.jpg" class="img-fluid rounded-end card-img-fit" alt="佐藤 生酛純米">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- トップに戻る -->
+<div class="text-center my-4">
+  <a href="index.html" class="btn btn-primary">トップページに戻る</a>
+</div>
+
+<!-- フッター -->
+<footer class="bg-dark text-white text-center py-3">
+  <p class="mb-0">© 薫酒や いこう商店</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
