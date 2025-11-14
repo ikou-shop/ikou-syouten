@@ -98,7 +98,7 @@ footer {
 /* ヒーローセクション */
 .hero-section {
   position: relative;
-  background-image: url("/images/tenpo2.jpg");
+  background-image: url("images/tenpo2.jpg");
   background-size: cover;
   background-position: center;
   height: 200px;
@@ -177,14 +177,14 @@ footer {
 }
 
 /* 各背景画像指定 */
-#about.bg-section::before  { background-image: url('/images/tenpo2.jpg'); }
-#kakuchi.bg-section::before { background-image: url('/images/kakuuchi.jpg'); }
-#tokuyaku.bg-section::before { background-image: url('/images/sakenarabi.jpg'); }
-#othersake.bg-section::before { background-image: url('/images/特約以外.jpg'); }
+#about.bg-section::before  { background-image: url('images/tenpo2.jpg'); }
+#kakuchi.bg-section::before { background-image: url('images/kakuuchi.jpg'); }
+#tokuyaku.bg-section::before { background-image: url('images/sakenarabi.jpg'); }
+#othersake.bg-section::before { background-image: url('images/特約以外.jpg'); }
 
 /* 特約ページ（単体ページ） */
 .tokuyaku-page .hero-section {
-  background: url('/images/tenpo3.jpg') center / cover no-repeat;
+  background: url('images/tenpo3.jpg') center / cover no-repeat;
 }
 
 .tokuyaku-page .hero-section .overlay {
