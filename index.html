@@ -15,6 +15,41 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
   
+  <!-- 構造化データ（JSON-LD）：Google Knowledge Panel 用 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "薫酒や いこう商店",
+    "image": "images/ikoulogo.jpg",
+    "description": "全国の日本酒を取り揃える『薫酒や いこう商店』公式サイト。角打ちスペースや新着情報も発信中。",
+    "telephone": "03-6682-3892",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "東京都江戸川区平井5丁目16－2",
+      "postalCode": "132-0035",
+      "addressLocality": "江戸川区",
+      "addressRegion": "東京都",
+      "addressCountry": "JP"
+    },
+    "url": "https://example.com",
+    "priceRange": "¥",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "12:00",
+        "closes": "22:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "12:00",
+        "closes": "20:00"
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="top-page" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100" tabindex="0">
 

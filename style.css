@@ -227,3 +227,67 @@ footer {
   text-align: center;
   margin-bottom: 5px;
 }
+
+/* ===================================== */
+/* フッター（#info）のレスポンシブ対応 */
+/* ===================================== */
+
+/* セクション区切り線（全デバイス共通） */
+#info .col-md-3 {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+#info .col-md-5 {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 767px) {
+  /* スマホ表示：ロゴ（上） → メニュー2カラム（中） → 店舗情報（下） */
+  #info .row {
+    /* flex-direction: column は使わず、デフォルトの flex-wrap: wrap を活用 */
+  }
+
+  #info .col-md-3 {
+    /* ロゴ：フル幅、上部中央 */
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center !important;
+    order: 1;
+  }
+
+  #info .col-md-5 {
+    /* メニュー：フル幅、2カラムで横並び */
+    flex: 0 0 100%;
+    max-width: 100%;
+    order: 2;
+  }
+
+  #info .col-md-4 {
+    /* 店舗情報：フル幅、下部 */
+    flex: 0 0 100%;
+    max-width: 100%;
+    order: 3;
+  }
+
+  /* メニュー内部：2カラムを確保（左：col-8、右：col-4） */
+  #info .col-md-5 .row .col-8,
+  #info .col-md-5 .row .col-4 {
+    /* Bootstrap col-* をリセット */
+  }
+
+  #info .col-md-5 .row .col-8 {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+    padding-right: 0.5rem;
+  }
+
+  #info .col-md-5 .row .col-4 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+    padding-left: 0.5rem;
+  }
+}
