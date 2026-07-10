@@ -192,30 +192,79 @@
       </div>
     </section>
 
-    <section id="info" class="py-3" style="background-color: #fff3e0;">
+    <section id="info" class="py-5" style="background-color: #f2f2f2;">
       <div class="container">
-        <h2>店舗情報</h2>
-        <ul>
-          <li>定休日：火曜日（水曜日）</li>
-          <li>営業時間：12:00〜22:00（日曜日20:00）</li>
-          <li>住所：〒132-0035 東京都江戸川区平井5丁目16－2</li>
-          <li>アクセス：平井駅徒歩2分</li>
-          <li>電話番号：<a href="tel:0366823892">03-6682-3892</a></li>
-          <li>決済方法：現金、クレジットカード、電子マネー、QRコード
-          </li>
-        </ul>
+        <div class="row align-items-start">
+          <!-- 左：ロゴ（スプラッシュと同じ画像に差し替え） -->
+          <div class="col-12 col-md-3 text-center text-md-start mb-4">
+            <img src="images/ikoulogo.jpg" alt="いこう商店ロゴ" style="max-width:140px;">
+          </div>
+
+          <!-- 中央：ナビリンク（すべてのメニュー項目を1列にまとめ、隣に主要ページリンク） -->
+          <div class="col-12 col-md-5 mb-4">
+            <div class="row">
+              <!-- 1列目：全メニュー項目をまとめる -->
+              <div class="col-8">
+                <ul class="list-unstyled">
+                  <li><a href="#home">TOP</a></li>
+                  <li><a href="#about">いこう商店とは</a></li>
+                  <li><a href="#kakuchi">角打ち</a></li>
+                  <li><a href="#tokuyaku">特約酒蔵</a></li>
+                  <li><a href="#othersake">その他取り扱い酒蔵</a></li>
+                  <li><a href="#news">新着情報</a></li>
+                  <li><a href="#event">イベント情報</a></li>
+                  <li><a href="#calendar">営業日カレンダー</a></li>
+                  <li><a href="#info">店舗情報</a></li>
+                  <li><a href="#sns">SNS情報</a></li>
+                </ul>
+              </div>
+
+              <!-- 2列目：角打ち詳細等の主要ページリンク -->
+              <div class="col-4">
+                <ul class="list-unstyled">
+                  <li><a href="kakuchi.html">角打ち詳細</a></li>
+                  <li><a href="news.html">新着情報一覧</a></li>
+                  <li><a href="event.html">イベント一覧</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- 右：店舗情報（元の表示に戻す） -->
+          <div class="col-12 col-md-4">
+            <h5 class="mb-2">薫酒や いこう商店</h5>
+            <ul class="list-unstyled">
+              <li>定休日：火曜日（水曜日）</li>
+              <li>営業時間：12:00〜22:00（日曜日20:00）</li>
+              <li>住所：〒132-0035 東京都江戸川区平井5丁目16－2</li>
+              <li>アクセス：平井駅徒歩2分</li>
+              <li>電話番号：<a href="tel:0366823892">03-6682-3892</a></li>
+              <li>決済方法：現金、クレジットカード、電子マネー、QRコード</li>
+            </ul>
+
+            <p class="mb-2 fw-bold">SNS情報</p>
+            <div class="d-flex align-items-center mt-3">
+              <a href="https://www.instagram.com/kunsyuya_ikou/" class="me-3" aria-label="Instagram">
+                <img src="images/insta.jpg" alt="Instagram" style="width:28px; height:28px; object-fit:cover; border-radius:4px;">
+              </a>
+              <a href="https://x.com/suzu51711?s=11&t=0RAwkwi1cX1BbxXA5SCO_w" class="me-3" aria-label="X">
+                <img src="images/X.png" alt="X" style="width:28px; height:28px; object-fit:contain;">
+              </a>
+              <a href="https://youtube.com/channel/UCKKlWhGRnCkH-k_fSwuzM3w?si=227lOlYtaEpzbOuE" class="me-3" aria-label="YouTube">
+                <img src="images/Youtube.png" alt="YouTube" style="width:28px; height:28px; object-fit:contain;">
+              </a>
+              <a href="https://page.line.me/266igwgs" aria-label="LINE">
+                <svg width="28" height="28" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" style="display:inline-block;vertical-align:middle;border-radius:4px;overflow:hidden">
+  <rect width="24" height="24" rx="4" ry="4" fill="#00c300"></rect>
+  <path d="M6 7c0-1.656 1.567-3 3.5-3h5C16.433 4 18 5.344 18 7v5c0 1.656-1.567 3-3.5 3H12l-3 3v-3H9C7.567 15 6 13.656 6 12V7z" fill="#fff"></path>
+</svg>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="sns" class="py-2 text-center" style="background-color: #fff3e0;">
-      <div class="container">
-        <h2>SNS情報</h2>
-        <a href="https://www.instagram.com/kunsyuya_ikou/" class="btn btn-outline-primary m-2">Instagram</a>
-        <a href="https://x.com/suzu51711?s=11&t=0RAwkwi1cX1BbxXA5SCO_w" class="btn btn-outline-info m-2">X（旧Twitter）</a>
-        <a href="https://youtube.com/channel/UCKKlWhGRnCkH-k_fSwuzM3w?si=227lOlYtaEpzbOuE" class="btn btn-outline-danger m-2">YouTube</a>
-        <a href="https://page.line.me/266igwgs" class="btn btn-success m-2">LINE公式</a>
-      </div>
-    </section>
 
   </div> <!-- #mainContent 終了 -->
 
