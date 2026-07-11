@@ -232,6 +232,80 @@ footer {
 /* フッター（#info）のレスポンシブ対応 */
 /* ===================================== */
 
+/* 店舗情報上部の地図カードと詳細カード */
+.store-map-card,
+.store-detail-card {
+  border: 1px solid #ddd;
+}
+
+.store-detail-card h2 {
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+}
+
+.store-detail-row {
+  border-top: 1px solid #eee;
+  padding-top: 0.9rem;
+}
+
+.store-detail-row:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.store-detail-label {
+  min-width: 100px;
+  color: #333;
+  font-weight: 700;
+}
+
+.store-detail-value {
+  color: #444;
+}
+
+.store-social-cta {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 1.5rem 0;
+  margin-bottom: 1.5rem;
+}
+
+.store-social-cta p {
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.store-social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.store-social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
+  height: 76px;
+  border: 1px solid #ddd;
+  border-radius: 18px;
+  background: #fff;
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.store-social-links a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.store-social-links img,
+.store-social-links svg {
+  width: 44px;
+  height: 44px;
+}
+
 /* セクション区切り線（全デバイス共通） */
 #info .col-md-3 {
   border-bottom: 1px solid #ddd;
