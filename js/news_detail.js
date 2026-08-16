@@ -11,7 +11,9 @@ function fmtJP(iso) {
 async function main() {
   const titleEl = document.getElementById("article-title");
   const dateEl  = document.getElementById("article-date");
+  const imgWrap = document.getElementById("article-image-wrap");
   const imgEl   = document.getElementById("article-image");
+  const imgLink = document.getElementById("article-image-link");
   const bodyEl  = document.getElementById("article-body");
 
   if (!id) {
@@ -38,11 +40,24 @@ async function main() {
     if (item.image) {
       imgEl.src = item.image;
       imgEl.alt = item.title || "記事画像";
-      imgEl.classList.remove("d-none");
+      if (item.link) {
+        imgLink.href = item.link;
+        imgLink.setAttribute("aria-label", `${item.title} をYouTubeで見る`);
+      } else {
+        imgLink.removeAttribute("href");
+        imgLink.removeAttribute("target");
+        imgLink.removeAttribute("rel");
+      }
+      imgWrap.classList.remove("d-none");
+    } else {
+      imgWrap.classList.add("d-none");
     }
 
     if (Array.isArray(item.body)) {
-      bodyEl.innerHTML = item.body.map(p => `<p>${p}</p>`).join("");
+      const bodyItems = item.body.map(p => `<p>${p}</p>`).join("");
+      bodyEl.innerHTML = item.link
+        ? `${bodyItems}<p><a href="${item.link}" target="_blank" rel="noopener noreferrer">▶ YouTube動画を見る</a></p>`
+        : bodyItems;
     } else if (item.bodyHtml) {
       // ※高度なレイアウトをしたい場合は bodyHtml を使ってください（HTML文字列）
       bodyEl.innerHTML = item.bodyHtml;
