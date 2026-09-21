@@ -452,11 +452,11 @@ footer {
 .works-card-category {
   display: inline-block;
   margin-top: -1px;
-  padding: 0.65rem 1rem;
+  padding: 0.45rem 0.65rem;
   color: #fff;
   background: #102d4d;
-  font-size: 0.88rem;
-  font-weight: 700;
+  font-size: 0.78rem;
+  font-weight: 400;
   letter-spacing: 0.03em;
 }
 
@@ -596,34 +596,29 @@ footer {
 }
 
 @media (max-width: 767px) {
-  .event-favorite-grid {
-    --bs-gutter-x: 0.75rem;
-  }
-
   .event-favorite-grid > [class*="col-"] {
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 
   .event-favorite-body {
-    padding: 0.75rem 0.7rem 0.85rem;
+    padding: 1.25rem 1.35rem 1.45rem;
   }
 
   .event-favorite-label {
-    margin-bottom: 0.3rem;
-    font-size: 0.58rem;
-    letter-spacing: 0.06em;
-    white-space: nowrap;
+    margin-bottom: 0.45rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.03em;
   }
 
   .event-favorite-body h3 {
-    margin-bottom: 0.45rem;
-    font-size: 1rem;
+    margin-bottom: 0.65rem;
+    font-size: 1.4rem;
   }
 
   .event-favorite-body p:last-child {
-    font-size: 0.78rem;
-    line-height: 1.6;
+    font-size: 0.92rem;
+    line-height: 1.8;
   }
 
   #event-list {
