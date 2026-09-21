@@ -6,6 +6,16 @@ function fmtDate(iso) {
   return `${y}/${m}/${da}`;
 }
 
+function escapeHtml(value) {
+  return String(value ?? "").replace(/[&<>"']/g, char => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#039;"
+  }[char]));
+}
+
 async function renderEvents({ jsonPath = "data/events.json", targetId = "event-list", limit = null } = {}) {
   try {
     const res = await fetch(jsonPath, { cache: "no-store" });
@@ -17,12 +27,20 @@ async function renderEvents({ jsonPath = "data/events.json", targetId = "event-l
     if (!el) return;
 
     el.innerHTML = sliced.map(item => `
-      <div class="row mb-2">
-        <div class="col-md-3 fw-bold">${fmtDate(item.date)}</div>
-        <div class="col-md-9">
-          <a href="event_detail.html?id=${encodeURIComponent(item.id)}" class="text-decoration-none">${item.title}</a>
-      </div>
-      <hr>
+      <article class="event-archive-card">
+        <a href="event_detail.html?id=${encodeURIComponent(item.id)}" class="event-archive-link">
+          <div class="event-archive-image">
+            ${item.image
+              ? `<img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.title)}" loading="lazy">`
+              : `<div class="event-archive-image-placeholder">EVENT</div>`}
+          </div>
+          <div class="event-archive-body">
+            <p class="event-archive-date">${escapeHtml(fmtDate(item.date))}</p>
+            <h2>${escapeHtml(item.title)}</h2>
+            <span class="event-archive-more">詳しく見る <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+      </article>
     `).join("");
 
     const moreWrap = document.getElementById("event-more-wrap");

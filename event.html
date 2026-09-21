@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>イベント情報｜薫酒や いこう商店</title>
+  <title>過去のイベント情報一覧｜薫酒や いこう商店</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -14,14 +14,17 @@
   </div>
 </header>
 
-  <div class="container my-5">
-    <h1 class="mb-4">イベント情報 一覧</h1>
+  <div class="container my-5 event-list-page">
+    <p class="event-kicker text-muted mb-2">ARCHIVE</p>
+    <h1 class="mb-4">過去のイベント情報一覧</h1>
 
-    <!-- JSで全件レンダリング -->
+    <p class="event-list-intro">これまでに開催したイベントの実績をご紹介します。写真やタイトルを押すと、イベントの詳しい情報をご覧いただけます。</p>
+
+    <!-- イベント実績をJSで全件レンダリング -->
     <div id="event-list"></div>
 
     <!-- トップへ戻るボタン -->
-    <a href="index.html#event" class="btn btn-secondary mt-3">← トップページへ戻る</a>
+    <a href="index.html#event" class="btn btn-primary mt-3">← トップページへ戻る</a>
 
     <noscript class="text-danger d-block mt-3">※JavaScriptを有効にするとイベント一覧が表示されます。</noscript>
   </div>

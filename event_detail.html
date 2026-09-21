@@ -14,12 +14,14 @@
   </div>
 </header>
 
-<div class="container my-5">
-  <h1 id="ev-title" class="mb-2"></h1>
-  <p id="ev-date" class="text-muted mb-3"></p>
-  <img id="ev-image" class="img-fluid my-3 d-none rounded" alt="">
-  <div id="ev-body" class="mb-4"></div>
-  <ul id="ev-details" class="list-unstyled"></ul>
+<main class="event-detail-page">
+  <div class="container my-5">
+    <p class="event-kicker text-muted mb-2">EVENT REPORT</p>
+    <h1 id="ev-title" class="mb-2"></h1>
+    <p id="ev-date" class="text-muted mb-3"></p>
+    <img id="ev-image" class="img-fluid my-3 d-none rounded" alt="">
+    <div id="ev-body" class="mb-4"></div>
+    <ul id="ev-details" class="list-unstyled"></ul>
 
 <!-- 予約案内（最初は非表示） -->
 <section class="pt-3 pb-0 d-none" id="reservation-block">
@@ -36,10 +38,11 @@
   <!-- 置き換え：aタグの代わりに「戻る」ボタンを採用 -->
 <button type="button" class="btn btn-outline-secondary mt-3"
   onclick="if (document.referrer && document.referrer !== location.href) { history.back(); } else { location.href='event.html'; }">
-  ← イベント一覧へ戻る
+  ← 過去のイベント情報一覧へ戻る
 </button>
 
 </div>
+</main>
 
 <footer class="text-center py-3 mt-5" style="background-color: #f0f0f0;">
   &copy; 2025 薫酒や いこう商店
