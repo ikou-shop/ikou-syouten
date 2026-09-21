@@ -596,6 +596,36 @@ footer {
 }
 
 @media (max-width: 767px) {
+  .event-favorite-grid {
+    --bs-gutter-x: 0.75rem;
+  }
+
+  .event-favorite-grid > [class*="col-"] {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+
+  .event-favorite-body {
+    padding: 0.75rem 0.7rem 0.85rem;
+  }
+
+  .event-favorite-label {
+    margin-bottom: 0.3rem;
+    font-size: 0.58rem;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+  }
+
+  .event-favorite-body h3 {
+    margin-bottom: 0.45rem;
+    font-size: 1rem;
+  }
+
+  .event-favorite-body p:last-child {
+    font-size: 0.78rem;
+    line-height: 1.6;
+  }
+
   #event-list {
     grid-template-columns: 1fr;
   }
