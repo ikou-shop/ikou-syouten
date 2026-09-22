@@ -10,22 +10,176 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="works-page">
+  <a id="works-top" href="index.html" class="works-logo">
+    <img src="images/hedda-.png" alt="薫酒や いこう商店">
+  </a>
+  <nav class="navbar navbar-expand-lg navbar-dark works-nav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">MENU</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#worksNavContent" aria-controls="worksNavContent" aria-expanded="false" aria-label="メニューを開く">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="worksNavContent" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="index.html#about" class="nav-link">いこう商店とは</a></li>
+          <li class="nav-item"><a href="index.html#kakuchi" class="nav-link">角打ち</a></li>
+          <li class="nav-item"><a href="index.html#tokuyaku" class="nav-link">特約酒蔵</a></li>
+          <li class="nav-item"><a href="index.html#othersake" class="nav-link">その他取り扱い酒蔵</a></li>
+          <li class="nav-item"><a href="index.html#regular-events" class="nav-link">いこう商店恒例イベント</a></li>
+          <li class="nav-item"><a href="index.html#news" class="nav-link">新着情報</a></li>
+          <li class="nav-item"><a href="index.html#event" class="nav-link">イベント情報</a></li>
+          <li class="nav-item"><a href="index.html#calendar" class="nav-link">営業日カレンダー</a></li>
+          <li class="nav-item"><a href="index.html#info" class="nav-link">店舗情報</a></li>
+          <li class="nav-item"><a href="index.html#sns" class="nav-link">SNS情報</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   <header class="works-header">
-    <a href="index.html" class="works-logo">
-      <img src="images/hedda-.png" alt="薫酒や いこう商店">
-    </a>
     <p class="event-kicker">EVENT ARCHIVE</p>
     <h1>過去のイベント実績</h1>
     <p>いこう商店で開催したイベントをご紹介します。</p>
   </header>
 
   <main class="container works-container">
-    <!-- 実績の追加・編集は data/works.json を更新してください。 -->
-    <div id="works-list" class="works-grid"></div>
-    <a href="index.html#regular-events" class="btn btn-outline-secondary mt-5">← トップページへ戻る</a>
+    <div class="works-content-frame">
+      <!-- 実績の追加・編集は data/works.json を更新してください。 -->
+      <div id="works-list" class="works-grid"></div>
+      <nav id="works-pagination" class="works-pagination" aria-label="イベント実績のページ"></nav>
+      <a href="#works-top" class="works-home-link">
+        <span aria-hidden="true">⌃</span>
+        ページ上部へ戻る
+      </a>
+    </div>
+    <a href="index.html#home" class="works-index-link">← トップページへ戻る</a>
   </main>
 
+  <section id="info" class="py-5 works-info" style="background-color: #f2f2f2;">
+    <div class="container">
+      <div class="row g-4 align-items-start mb-5 store-detail-top">
+        <div class="col-12 col-lg-5">
+          <div class="store-map-card p-0 bg-white rounded shadow-sm overflow-hidden">
+            <div class="store-map-svg mb-0">
+              <iframe src="https://maps.google.com/maps?q=東京都江戸川区平井5丁目16-2&z=16&output=embed" width="100%" height="280" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="p-3 pt-2">
+              <a href="https://www.google.com/maps/search/?api=1&query=東京都江戸川区平井5丁目16-2" target="_blank" rel="noreferrer" class="d-block text-decoration-none text-dark">Google Mapで表示</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-7">
+          <div class="store-detail-card p-3 bg-white rounded shadow-sm">
+            <h2 class="h5 mb-4">店舗情報</h2>
+            <div class="store-detail-row d-flex flex-wrap mb-3">
+              <div class="store-detail-label">tel</div>
+              <div class="store-detail-value">03-6682-3892</div>
+            </div>
+            <div class="store-detail-row d-flex flex-wrap mb-3">
+              <div class="store-detail-label">営業時間</div>
+              <div class="store-detail-value">14:00〜22:00（月、水、木）<br>
+              12:00〜22:00（金、土）<br>
+              12:00〜20:00（日、祝日最終日）</div>
+            </div>
+            <div class="store-detail-row d-flex flex-wrap mb-3">
+              <div class="store-detail-label">定休日</div>
+              <div class="store-detail-value">火曜日（水曜日）</div>
+            </div>
+            <div class="store-detail-row d-flex flex-wrap">
+              <div class="store-detail-label">アクセス</div>
+              <div class="store-detail-value">〒132-0035 東京都江戸川区平井5丁目16－2<br>平井駅北口から徒歩2分</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center store-social-cta">
+        <div class="col-12 text-center mb-3">
+          <p class="mb-3" style="font-size:1.15rem;font-weight:700;">いこう商店の最新情報をSNSからチェック！</p>
+        </div>
+        <div class="col-12 text-center store-social-links">
+          <a href="https://www.instagram.com/kunsyuya_ikou/" target="_blank" rel="noreferrer" aria-label="Instagram">
+            <img src="images/insta.jpg" alt="Instagram" style="width:40px; height:40px; object-fit:cover; border-radius:8px;">
+          </a>
+          <a href="https://x.com/ikou2022" target="_blank" rel="noreferrer" aria-label="X">
+            <img src="images/X.png" alt="X" style="width:40px; height:40px; object-fit:contain;">
+          </a>
+          <a href="https://youtube.com/channel/UCKKlWhGRnCkH-k_fSwuzM3w?si=227lOlYtaEpzbOuE" target="_blank" rel="noreferrer" aria-label="YouTube">
+            <img src="images/Youtube.png" alt="YouTube" style="width:40px; height:40px; object-fit:contain;">
+          </a>
+          <a href="https://page.line.me/266igwgs" target="_blank" rel="noreferrer" aria-label="LINE">
+            <svg width="40" height="40" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" style="width:40px; height:40px; display:block;">
+              <rect width="24" height="24" rx="4" ry="4" fill="#00c300"></rect>
+              <path d="M6 7c0-1.656 1.567-3 3.5-3h5C16.433 4 18 5.344 18 7v5c0 1.656-1.567 3-3.5 3H12l-3 3v-3H9C7.567 15 6 13.656 6 12V7z" fill="#fff"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="row align-items-start">
+        <div class="col-12 col-md-3 text-center text-md-start mb-4">
+          <img src="images/ikoulogo.jpg" alt="いこう商店ロゴ" style="max-width:140px;">
+        </div>
+        <div class="col-12 col-md-5 mb-4">
+          <div class="row">
+            <div class="col-8">
+              <ul class="list-unstyled">
+                <li><a href="index.html#home">TOP</a></li>
+                <li><a href="index.html#about">いこう商店とは</a></li>
+                <li><a href="index.html#kakuchi">角打ち</a></li>
+                <li><a href="index.html#tokuyaku">特約酒蔵</a></li>
+                <li><a href="index.html#othersake">その他取り扱い酒蔵</a></li>
+                <li><a href="index.html#regular-events">いこう商店恒例イベント</a></li>
+                <li><a href="index.html#news">新着情報</a></li>
+                <li><a href="index.html#event">イベント情報</a></li>
+                <li><a href="index.html#calendar">営業日カレンダー</a></li>
+                <li><a href="index.html#info">店舗情報</a></li>
+                <li><a href="index.html#sns">SNS情報</a></li>
+              </ul>
+            </div>
+            <div class="col-4">
+              <ul class="list-unstyled">
+                <li><a href="kakuchi.html">角打ち詳細</a></li>
+                <li><a href="news.html">新着情報一覧</a></li>
+                <li><a href="event.html">イベント一覧</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <h5 class="mb-2">薫酒や いこう商店</h5>
+          <ul class="list-unstyled">
+            <li>定休日：火曜日（水曜日）</li>
+            <li>営業時間：14:00〜22:00（月、水、木）<br>
+              　　　　　12:00〜22:00（金、土）<br>
+              　　　　　12:00〜20:00（日、祝日最終日）</li>
+            <li>住所：〒132-0035 東京都江戸川区平井5丁目16－2</li>
+            <li>アクセス：平井駅徒歩2分</li>
+            <li>電話番号：<a href="tel:0366823892">03-6682-3892</a></li>
+            <li>決済方法：現金、クレジットカード、電子マネー、QRコード</li>
+          </ul>
+          <p class="mb-2 fw-bold">SNS情報</p>
+          <div class="d-flex align-items-center mt-3">
+            <a href="https://www.instagram.com/kunsyuya_ikou/" class="me-3" aria-label="Instagram">
+              <img src="images/insta.jpg" alt="Instagram" style="width:28px; height:28px; object-fit:cover; border-radius:4px;">
+            </a>
+            <a href="https://x.com/ikou2022" class="me-3" aria-label="X">
+              <img src="images/X.png" alt="X" style="width:28px; height:28px; object-fit:contain;">
+            </a>
+            <a href="https://youtube.com/channel/UCKKlWhGRnCkH-k_fSwuzM3w?si=227lOlYtaEpzbOuE" class="me-3" aria-label="YouTube">
+              <img src="images/Youtube.png" alt="YouTube" style="width:28px; height:28px; object-fit:contain;">
+            </a>
+            <a href="https://page.line.me/266igwgs" aria-label="LINE">
+              <svg width="28" height="28" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" style="display:inline-block;vertical-align:middle;border-radius:4px;overflow:hidden">
+                <rect width="24" height="24" rx="4" ry="4" fill="#00c300"></rect>
+                <path d="M6 7c0-1.656 1.567-3 3.5-3h5C16.433 4 18 5.344 18 7v5c0 1.656-1.567 3-3.5 3H12l-3 3v-3H9C7.567 15 6 13.656 6 12V7z" fill="#fff"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer class="text-center py-3 mt-5">&copy; 2025 薫酒や いこう商店</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/works.js"></script>
   <script>renderWorks();</script>
 </body>

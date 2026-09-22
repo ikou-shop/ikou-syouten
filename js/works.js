@@ -18,8 +18,15 @@ async function renderWorks() {
     if (!response.ok) throw new Error(`イベント実績の読み込みに失敗しました: ${response.status}`);
     const works = await response.json();
     works.sort((a, b) => new Date(b.date) - new Date(a.date));
+    const pageSize = 10;
+    const requestedPage = Number.parseInt(new URLSearchParams(window.location.search).get("page") || "1", 10);
+    const totalPages = Math.max(1, Math.ceil(works.length / pageSize));
+    const currentPage = Number.isInteger(requestedPage) && requestedPage >= 1
+      ? Math.min(requestedPage, totalPages)
+      : 1;
+    const pageWorks = works.slice((currentPage - 1) * pageSize, currentPage * pageSize);
 
-    target.innerHTML = works.map(work => `
+    target.innerHTML = pageWorks.map(work => `
       <article class="works-card">
         <a href="work_detail.html?id=${encodeURIComponent(work.id)}">
           <div class="works-card-image">
@@ -34,6 +41,20 @@ async function renderWorks() {
         </a>
       </article>
     `).join("");
+
+    const pagination = document.getElementById("works-pagination");
+    if (pagination) {
+      pagination.innerHTML = totalPages > 1
+        ? `
+          ${currentPage > 1 ? `<a href="?page=${currentPage - 1}" aria-label="前のページ">‹</a>` : ""}
+          ${Array.from({ length: totalPages }, (_, index) => {
+            const page = index + 1;
+            return `<a href="?page=${page}" class="${page === currentPage ? "is-current" : ""}" ${page === currentPage ? 'aria-current="page"' : ""}>${page}</a>`;
+          }).join("")}
+          ${currentPage < totalPages ? `<a href="?page=${currentPage + 1}" aria-label="次のページ">›</a>` : ""}
+        `
+        : "";
+    }
   } catch (error) {
     console.error(error);
     target.innerHTML = '<p class="text-danger">イベント実績を読み込めませんでした。</p>';
