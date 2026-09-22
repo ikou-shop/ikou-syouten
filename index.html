@@ -217,7 +217,8 @@
           <div class="event-favorite-body">
             <p class="event-favorite-label">SPECIAL EVENT 01</p>
             <h3>酒蔵の会！</h3>
-            <p>酒蔵の方を実際にお招きして、業界の裏話や日本酒造りの工程を聞きながら味わう恒例の会です。</p>
+            <button class="event-favorite-toggle" type="button" aria-expanded="false" aria-label="酒蔵の会の説明を表示">⌄</button>
+            <p class="event-favorite-description">酒蔵の方を実際にお招きして、業界の裏話や日本酒造りの工程を聞きながら味わう恒例の会です。</p>
           </div>
         </article>
       </div>
@@ -229,7 +230,8 @@
           <div class="event-favorite-body">
             <p class="event-favorite-label">SPECIAL EVENT 02</p>
             <h3>飲みきり会！</h3>
-            <p>夏や年末など季節ごとに角打ち冷蔵庫のお酒をみんなで飲み切る、いこう商店ならではの飲み放題イベントです。</p>
+            <button class="event-favorite-toggle" type="button" aria-expanded="false" aria-label="飲みきり会の説明を表示">⌄</button>
+            <p class="event-favorite-description">夏や年末など季節ごとに角打ち冷蔵庫のお酒をみんなで飲み切る、いこう商店ならではの飲み放題イベントです。</p>
           </div>
         </article>
       </div>
@@ -241,7 +243,8 @@
           <div class="event-favorite-body">
             <p class="event-favorite-label">SPECIAL EVENT 03</p>
             <h3>音楽ライブ！</h3>
-            <p>おいしいお酒と音楽を一緒に楽しむ、店内ライブを定期的に開催しています。</p>
+            <button class="event-favorite-toggle" type="button" aria-expanded="false" aria-label="音楽ライブの説明を表示">⌄</button>
+            <p class="event-favorite-description">おいしいお酒と音楽を一緒に楽しむ、店内ライブを定期的に開催しています。</p>
           </div>
         </article>
       </div>
@@ -439,6 +442,16 @@
   // トップは最新3件のみ
   renderNews({ limit: 3 });
   renderEvents({ limit: 3 });
+</script>
+<script>
+  document.querySelectorAll('.event-favorite-toggle').forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!isExpanded));
+      toggle.setAttribute('aria-label', `${isExpanded ? '非表示' : '表示'}：イベント説明`);
+      toggle.nextElementSibling.classList.toggle('is-visible', !isExpanded);
+    });
+  });
 </script>
 
 <footer>
